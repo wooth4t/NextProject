@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Narratives</title>
+  <style>
+    body {
+      background: #f3f3f3;
+    }
+
+    h1,
+    h3,
+    p {
+      text-align: center;
+    }
+
+    h2,
+    h3,
+    p,
+    li {
+      font-family: Times, Georgia;
+    }
+
+    h1 {
+      font-family: monospace;
+      margin: 30px auto 0;
+    }
+
+    h2 {
+      color: gray;
+      text-shadow: cadetblue;
+      font-size: 24px;
+      margin: 0 auto;
+      max-width: 450px;
+      text-align: right;
+    }
+
+    img {
+      border-radius: 8px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    h3 {
+      color: gray;
+      font-size: 11px;
+    }
+
+    h6 {
+      color: gray;
+      display: block;
+      margin: 0 auto;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 13px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      color: black;
+      font-size: 14px;
+      line-height: 1.2;
+      margin: 20px 60px;
+    }
+
+    ul {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    li {
+      border-radius: 10px;
+      font-size: 11px;
+      list-style: none;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 2px;
+      text-align: center;
+      transition: all 200ms ease-in-out;
+    }
+
+    button {
+      background: rgb(85, 6, 6);
+      border: 1px solid gray;
+      border-radius: 8px;
+      box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+      color: white;
+      cursor: pointer;
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      margin: 20px auto;
+      padding: 10px;
+      transition: all 200ms ease;
+    }
+
+    button:hover {
+      background: white;
+      border: 1px solid rgb(85, 6, 6);
+      color: rgb(85, 6, 6);
+      cursor: pointer;
+    }
+
+    .data {
+      color: rgb(187, 20, 20);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    LIVING THROUGH THE PANDEMIC
+  </h1>
+  <h2>
+    <em>
+      our narratives
+    </em>
+  </h2>
+  <img src="https://s.hdnux.com/photos/01/11/20/62/19205308/3/rawImage.jpg" alt="COVID distribution map" width="400" />
+  <h3>
+    <em>
+      "Life can only be understood backwards; but it must be lived forwards."
+      - Soren Kierkegaard
+    </em>
+  </h3>
+  <p class="opening">
+    Many of us are on edge since
+    <a href="https://news.google.com/covid19/map?hl=en-CA&gl=CA&ceid=CA%3Aen" target="_blank" class="data">COVID</a>
+    surfaced.
+    <br />
+    Fear and anxiety are rampant and has brought out the worst for some.
+    <br />
+    We live without knowing when this will all be over.
+    <br />
+    <br />
+    The new norm has come.
+    <br />
+    <br />
+    However this too will pass and become a chapter in history.
+    <br />
+    The stories during these times will be and are invaluable.
+    <br />
+    We all have a responsibility to tell our stories.
+  </p>
+
+  <ul>
+    <li>
+      We can give perspective to those who lack understanding
+    </li>
+    <li>
+      It gives us the opportunity to change human behaviour for the better
+    </li>
+    <li>
+      It makes us realize how little control we have
+    </li>
+    <li>
+      Yet it also makes us more resilient and able to tackle greater issues
+    </li>
+  </ul>
+
+  <p class="ask">
+    It's time to share. Each story counts.
+    <br />
+    Let's do that here 👇
+    <br />
+    People will listen.
+    <button>
+      start sharing
+    </button>
+  </p>
+  <h6>
+    Coded by Ruth Kim
+  </h6>
+  <script>
+    function begin() {
+      let name = prompt("What is your name?");
+      let contact = prompt("What is your email address?");
+      let decision = prompt(
+        "Would you like to receive a series of questions to answer rather than sending us a free form written narrative?"
+      );
+
+      if (decision === "yes") {
+        let h1 = document.write(
+          "<em>Thank you for your interest! </em> <br /> A list of questions have been sent to: " +
+          contact +
+          " <br/> You will be directed to our guidelines momentarily..."
+        );
+      } else {
+        if (decision === "no") {
+          let h1 = document.write(
+            "You will be directed to our guidelines momentarily..."
+          );
+        }
+        if (decision !== "no") {
+          alert("Please try again");
+        }
+      }
+    }
+
+    let shareButton = document.querySelector("button");
+    shareButton.addEventListener("click", begin);
+  </script>
+</body>
+
+</html>
